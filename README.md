@@ -50,18 +50,37 @@ The application follows a straightforward component-based flow. The main `App.js
 
 *Note: The diagram includes planned routes for future features that are not yet implemented.*
 
-```mermaid
-graph TD
-    A[User visits the site] --> B{App.js - Main Router};
-    B -- "/" or "/courses" --> C[CourseList Component];
-    C --> D[Render list of courses];
-
-    subgraph Future Features
-        B -- "/add" --> E[AddCourse Component];
-        E --> F[Display form to add a new course];
-        B -- "/courses/:id" --> G[CourseDetail Component];
-        G --> H[Display details of a specific course];
-    end
+```
+[ User Visits Site ]
+        |
+        v
++-------------------+
+| App.js (Router)   |
++-------------------+
+  |
+  |--- ROUTE: "/" or "/courses"
+  |     |
+  |     v
+  |   +-----------------------+
+  |   | CourseList Component  |
+  |   +-----------------------+
+  |           |
+  |           v
+  |   [ Renders a list of all courses ]
+  |
+  |--- ROUTE: "/add" (Future)
+  |     |
+  |     v
+  |   +-----------------------+
+  |   |   AddCourse Component   |
+  |   +-----------------------+
+  |
+  |--- ROUTE: "/courses/:id" (Future)
+        |
+        v
+      +-------------------------+
+      |  CourseDetail Component   |
+      +-------------------------+
 ```
 
 ---
