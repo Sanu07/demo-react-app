@@ -40,13 +40,15 @@ You need to have `Node.js` and `npm` installed on your machine.
    ```sh
    npm start
    ```
-   The application will be available at `http://localhost:3000`.
+   The application will then be available at `http://localhost:3000`.
 
 ---
 
 ## 🌊 Application Flow
 
 The application follows a straightforward component-based flow. The main `App.js` serves as the entry point, using `react-router-dom` to manage navigation between different views.
+
+*Note: The diagram includes planned routes for future features that are not yet implemented.*
 
 ```mermaid
 graph TD
